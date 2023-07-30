@@ -1,6 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render
 from rest_framework import viewsets, views, status
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from notes.models import Note
@@ -11,7 +12,7 @@ from notes.serializers import NoteSerializer
 
 
 class NoteViewCreateSet(views.APIView):
-
+    permission_classes = (IsAuthenticated,)
     def get(self, request):
         notes = Note.objects.all()
         serializer = NoteSerializer(notes, many=True)
@@ -26,7 +27,7 @@ class NoteViewCreateSet(views.APIView):
 
 
 class SnippetDetail(views.APIView):
-
+    permission_classes = (IsAuthenticated,)
     def get_object(self, pk):
         try:
             return Note.objects.get(pk=pk)
