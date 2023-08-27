@@ -5,61 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d4a9221-87bd-4ab2-b699-d664b386d410" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_end/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/migrations/0002_alter_notes_id.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/migrations/0003_rename_notes_note_rename_id_done_note_is_done.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front_end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front_end/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/components/Home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/components/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/components/Login.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/components/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/components/Logout.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/components/Logout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/components/Nav.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/components/Nav.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/components/axios.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/reportWebVitals.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/src/reportWebVitals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/src/setupTests.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1693146083415</updated>
-      <workItem from="1693146098738" duration="979000" />
+      <workItem from="1693146098738" duration="1830000" />
     </task>
     <servers />
   </component>
