@@ -1,5 +1,6 @@
-import { Link } from 'react-router-dom';
-import { useAuthStore } from '../store/auth';
+import {Link} from 'react-router-dom';
+import {useAuthStore} from '../store/auth';
+import Cookies from 'js-cookie';
 
 const Home = () => {
     const [isLoggedIn, user] = useAuthStore((state) => [
@@ -8,18 +9,27 @@ const Home = () => {
     ]);
     return (
         <div>
-            {isLoggedIn() ? <LoggedInView user={user()} /> : <LoggedOutView />}
+            {isLoggedIn() ? <LoggedInView user={user()}/> : <LoggedOutView/>}
         </div>
     );
 };
 
-const LoggedInView = ({ user }) => {
+
+
+
+const LoggedInView = ({user}) => {
+    function retrieveNotes() {
+        let userId = Cookies.get('user_id')
+    }
+
     return (
         <div>
+            {retrieveNotes()}
             <h1>Welcome {user.username}</h1>
-            <Link to="/private">
-                <button>Private</button>
-            </Link>
+            {/*<Link to="/private">*/}
+            {/*    <button>Private</button>*/}
+            {/*</Link>*/}
+
             <Link to="/logout">
                 <button>Logout</button>
             </Link>
@@ -27,7 +37,7 @@ const LoggedInView = ({ user }) => {
     );
 };
 
-export const LoggedOutView = ({ title = 'Home' }) => {
+export const LoggedOutView = ({title = 'Home'}) => {
     return (
         <div>
             <h1>{title}</h1>

@@ -60,6 +60,9 @@ export const setUser = async () => {
 };
 
 export const setAuthUser = (access_token, refresh_token) => {
+
+    let userid = jwt_decode(access_token).user_id
+    Cookies.set('user_id',userid)
     Cookies.set('access_token', access_token, {
         expires: 1,
         secure: true,

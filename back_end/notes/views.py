@@ -30,13 +30,13 @@ class SnippetDetail(views.APIView):
     permission_classes = (IsAuthenticated,)
     def get_object(self, pk):
         try:
-            return Note.objects.get(pk=pk)
+            return Note.objects.filter(creator_id=pk)
         except Note.DoesNotExist:
             raise Http404
 
     def get(self, request, pk, format=None):
         snippet = self.get_object(pk)
-        serializer = NoteSerializer(snippet)
+        serializer = NoteSerializer(snippet, many=True)
         return Response(serializer.data)
 
     def put(self, request, pk, format=None):

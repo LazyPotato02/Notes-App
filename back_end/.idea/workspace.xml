@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d4a9221-87bd-4ab2-b699-d664b386d410" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58a89505-21eb-4980-9220-95ddc7b605e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58a89505-21eb-4980-9220-95ddc7b605e7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back_end/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/notes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front_end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/src/utils/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/src/utils/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front_end/src/views/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/src/views/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +86,7 @@
       <updated>1693146083415</updated>
       <workItem from="1693146098738" duration="2298000" />
       <workItem from="1693229000446" duration="1247000" />
-      <workItem from="1693230904488" duration="800000" />
+      <workItem from="1693230904488" duration="3430000" />
     </task>
     <servers />
   </component>
