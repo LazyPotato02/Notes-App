@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d4a9221-87bd-4ab2-b699-d664b386d410" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/58a89505-21eb-4980-9220-95ddc7b605e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/58a89505-21eb-4980-9220-95ddc7b605e7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back_end/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/back_end/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../front_end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../front_end/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../front_end/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,26 +28,28 @@
   </component>
   <component name="ProjectId" id="2UZTQAD7M5B5MJ4Rj2EOjMJlYH1" />
   <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/stoqn/Projects/Notes-App/back_end&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="back_end" type="Python.DjangoServer" factoryName="Django server">
       <module name="back_end" />
@@ -81,7 +84,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1693146083415</updated>
-      <workItem from="1693146098738" duration="1830000" />
+      <workItem from="1693146098738" duration="2298000" />
+      <workItem from="1693229000446" duration="1247000" />
+      <workItem from="1693230904488" duration="800000" />
     </task>
     <servers />
   </component>
