@@ -1,7 +1,6 @@
-from django.http import Http404, JsonResponse
+from django.http import Http404
 from django.shortcuts import render
 from rest_framework import viewsets, views, status
-from rest_framework.decorators import api_view
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
@@ -14,6 +13,7 @@ from notes.serializers import NoteSerializer
 
 class NoteViewCreateSet(views.APIView):
     permission_classes = (IsAuthenticated,)
+
     def get(self, request):
         notes = Note.objects.all()
         serializer = NoteSerializer(notes, many=True)
@@ -29,6 +29,7 @@ class NoteViewCreateSet(views.APIView):
 
 class SnippetDetail(views.APIView):
     permission_classes = (IsAuthenticated,)
+
     def get_object(self, pk):
         try:
             return Note.objects.filter(creator_id=pk)
@@ -39,6 +40,25 @@ class SnippetDetail(views.APIView):
         snippet = self.get_object(pk)
         serializer = NoteSerializer(snippet, many=True)
         return Response(serializer.data)
+
+    def patch(self, request, pk):
+        updated_instances = []
+
+        for data in request.data:
+            instance_id = data.get('id')
+            try:
+                instance = Note.objects.get(pk=instance_id, creator_id=pk)
+            except Note.DoesNotExist:
+                continue  # Skip this instance if it doesn't exist for the specified user
+
+            serializer = NoteSerializer(instance, data=data, partial=True)
+            if serializer.is_valid():
+                serializer.save()
+                updated_instances.append(serializer.data)
+            else:
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        return Response(updated_instances, status=status.HTTP_200_OK)
 
     def put(self, request, pk, format=None):
         snippet = self.get_object(pk)

@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8077cfe6-2e7f-4025-ba2f-48e3c72cc5c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../back_end/.idea/dataSources/58a89505-21eb-4980-9220-95ddc7b605e7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back_end/.idea/dataSources/58a89505-21eb-4980-9220-95ddc7b605e7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../back_end/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../back_end/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back_end/back_end/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../back_end/back_end/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../back_end/notes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../back_end/notes/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../back_end/user_api/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../back_end/user_api/serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +72,7 @@
       <updated>1693146281585</updated>
       <workItem from="1693146282693" duration="4012000" />
       <workItem from="1693229166351" duration="4665000" />
-      <workItem from="1693400809507" duration="7119000" />
+      <workItem from="1693400809507" duration="7719000" />
     </task>
     <servers />
   </component>
