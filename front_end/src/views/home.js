@@ -1,8 +1,8 @@
 import {Link} from 'react-router-dom';
 import {useAuthStore} from '../store/auth';
 import Cookies from 'js-cookie';
-import axios from "axios";
 import {useEffect, useState} from "react";
+import './home.css'
 
 const Home = () => {
     const [fetchedData, setFetchedData] = useState(null);
@@ -43,7 +43,7 @@ const Home = () => {
                 setError(error);
                 setLoading(false);
             });
-    }, []); // Empty dependency array to run the effect once on mount
+    }, [accessToken, apiUrl]); // Empty dependency array to run the effect once on mount
 
     if (loading) {
         return <p>Loading...</p>;
@@ -53,28 +53,48 @@ const Home = () => {
         return <p>Error: {error.message}</p>;
     }
 
+    function isDone(phase){
+        if(phase === 'true'){
+            return '✅'
+        }else{
+            return '❌'
+        }
+    }
     return (
         <div>
             {isLoggedIn() ? <LoggedInView user={user()}/> : <LoggedOutView/>}
-            {fetchedData && (
-                <div>
-                    <h1>Fetched Data</h1>
-                    <pre>{JSON.stringify(fetchedData, null, 2)}</pre>    {/*    [0]['id']  for specific value*/}
-                </div>
-            )}
+            {/*{fetchedData && (*/}
+            {/*    <div>*/}
+            {/*        <h1>Fetched Data</h1>*/}
+            {/*        <pre>{JSON.stringify(fetchedData, null, 2)}</pre>    /!*    [0]['id']  for specific value*!/*/}
+            {/*    </div>*/}
+            {/*)}*/}
+            <section className={'car__article'}>
+
+                {fetchedData.map((item, index) => (
+                    <article key={index} className={`car__item`}>
+
+                        <p>Id: {item.id}</p>
+                        <p>Title: {item.title}</p>
+                        <p>Year: {item.content}</p>
+
+                        <p>Done: {isDone(String(item.is_done))}</p>
+
+                        <button className={'edit__btn'}>Edit</button>
+                        <button className={'dibe__btn'}>Done</button>
+                    </article>
+                ))}
+            </section>
         </div>
     );
 };
 
 
 const LoggedInView = ({user}) => {
-    function retrieveNotes() {
-        let userId = Cookies.get('user_id')
-    }
+
 
     return (
         <div>
-            {retrieveNotes()}
             <h1>Welcome {user.username}</h1>
             {/*<Link to="/private">*/}
             {/*    <button>Private</button>*/}
