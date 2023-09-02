@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 import {useEffect, useState} from "react";
 import './home.css'
 
+
 const Home = () => {
     const [fetchedData, setFetchedData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -12,6 +13,9 @@ const Home = () => {
         state.isLoggedIn,
         state.user,
     ]);
+
+    const [isEditing, setIsEditing] = useState(false);
+
     let userId = Cookies.get('user_id')
     let accessToken = Cookies.get('access_token')
     const apiUrl = `http://localhost:8000/api-notes/notes/${userId}/`; // Replace with your API URL
@@ -53,42 +57,39 @@ const Home = () => {
         return <p>Error: {error.message}</p>;
     }
 
-    function isDone(phase){
-        if(phase === 'true'){
+    function isDone(phase) {
+        if (phase === 'true') {
             return '✅'
-        }else{
+        } else {
             return '❌'
         }
     }
+
+
+
+
     return (
         <div>
             {isLoggedIn() ? <LoggedInView user={user()}/> : <LoggedOutView/>}
-            {/*{fetchedData && (*/}
-            {/*    <div>*/}
-            {/*        <h1>Fetched Data</h1>*/}
-            {/*        <pre>{JSON.stringify(fetchedData, null, 2)}</pre>    /!*    [0]['id']  for specific value*!/*/}
-            {/*    </div>*/}
-            {/*)}*/}
+
             <section className={'car__article'}>
 
                 {fetchedData.map((item, index) => (
                     <article key={index} className={`car__item`}>
-
                         <p>Id: {item.id}</p>
                         <p>Title: {item.title}</p>
+                        <p>Text: {item.text}</p>
                         <p>Year: {item.content}</p>
-
                         <p>Done: {isDone(String(item.is_done))}</p>
-
                         <button className={'edit__btn'}>Edit</button>
                         <button className={'dibe__btn'}>Done</button>
+
                     </article>
                 ))}
             </section>
         </div>
     );
 };
-
 
 const LoggedInView = ({user}) => {
 

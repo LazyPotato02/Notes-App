@@ -25,5 +25,21 @@ class Note(models.Model):
         blank=False,
         null=False,
     )
+    note_id = models.IntegerField(
+        blank=False,
+        null=False,
+        default=0
+    )
+
+    def save(self, *args, **kwargs):
+        if not self.note_id:
+            # Find the next available note_id for the creator
+            max_note_id = Note.objects.filter(creator_id=self.creator_id).aggregate(models.Max('note_id'))['note_id__max']
+            if max_note_id is None:
+                self.note_id = 1
+            else:
+                self.note_id = max_note_id + 1
+
+        super(Note, self).save(*args, **kwargs)
     def __str__(self):
         return f'ID: {self.id}, Title: {self.title}, Creator ID: {self.creator_id}, Done: {self.is_done}'
