@@ -38,7 +38,7 @@ const Home = () => {
         })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error('Please log-in or register');
                 }
                 return response.json();
             })
@@ -57,7 +57,17 @@ const Home = () => {
     }
 
     if (error) {
-        return <p>Error: {error.message}</p>;
+        return (
+            <div className={'error__class'}>
+                <p className={'message'}>{error.message}</p>
+                <Link to="/login">
+                    <button className={'login__btn'}>Login</button>
+                </Link>
+                <Link to="/register">
+                    <button className={'register__btn'}>Register</button>
+                </Link>
+            </div>
+        )
     }
 
     function isDone(phase) {
@@ -210,6 +220,7 @@ const Home = () => {
 
     return (
         <div>
+
             {isLoggedIn() ? <LoggedInView user={user()}/> : <LoggedOutView/>}
             <div className={'create_note'}>
                 <button className={'create_btn'} onClick={openModal}>Create</button>

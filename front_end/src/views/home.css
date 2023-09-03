@@ -255,3 +255,18 @@
     background-color: azure;
     cursor: pointer;
 }
+
+.error__class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error__class p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.error__class button{
+    margin-top: 20px;
+}
