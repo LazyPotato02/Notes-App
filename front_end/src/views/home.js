@@ -103,6 +103,31 @@ const Home = () => {
         setEditedItem({title: "", content: "", is_done: false});
     };
 
+
+    const handleDeleteClick = async(index) => {
+         const headers = {
+            'Authorization': `Bearer ${accessToken}`,
+            'Content-Type': 'application/json',
+        };
+         try {
+            const response = await fetch(`${apiUrl}${fetchedData[index].creator_id}`, {
+                method: 'DELETE',
+                headers: headers,
+            });
+
+            if (!response.ok) {
+                throw new Error('Delete failed');
+            }
+            if (response.ok){
+                window.location.reload(false)
+            }
+            // Update the local state with the edited item
+        } catch (error) {
+            console.error('Error updating content:', error);
+        }
+
+    }
+
     return (
         <div>
             {isLoggedIn() ? <LoggedInView user={user()}/> : <LoggedOutView/>}
@@ -137,6 +162,7 @@ const Home = () => {
                                 <p>Text: {item.content}</p>
                                 <p>Done: {isDone(String(item.is_done))}</p>
                                 <button className={'edit__btn'} onClick={() => handleEditClick(index)}>Edit</button>
+                                <button className={'delete__btn'} onClick={() => handleDeleteClick(index)}>Delete</button>
 
                             </div>
                         )}
