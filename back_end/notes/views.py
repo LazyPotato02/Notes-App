@@ -75,6 +75,7 @@ class SnippetDetail(views.APIView):
     def delete(self, request, pk, note_id, format=None):
         try:
             note = self.get_object(pk, note_id)
+
         except Http404:
             return Response({'detail': 'Note not found.'}, status=status.HTTP_404_NOT_FOUND)
 
