@@ -78,9 +78,11 @@ const Home = () => {
             'Authorization': `Bearer ${accessToken}`,
             'Content-Type': 'application/json',
         };
+        let i = index + 1
 
         try {
-            const response = await fetch(`${apiUrl}${fetchedData[index].creator_id}`, {
+
+            const response = await fetch(`${apiUrl}${i}`, {
                 method: 'PUT',
                 headers: headers,
                 body: JSON.stringify(updatedItem),
@@ -210,7 +212,7 @@ const Home = () => {
         <div>
             {isLoggedIn() ? <LoggedInView user={user()}/> : <LoggedOutView/>}
             <div className={'create_note'}>
-                <button onClick={openModal}>Create</button>
+                <button className={'create_btn'} onClick={openModal}>Create</button>
                 <Modal
                     isOpen={modalIsOpen}
                     onRequestClose={closeModal}
@@ -219,6 +221,7 @@ const Home = () => {
                 >
                     <div className={'wrapper'}>
                         <h2>Create Item</h2>
+
                         <input
                             type="text"
                             name="title"
@@ -240,35 +243,44 @@ const Home = () => {
                     </div>
                 </Modal>
             </div>
-            <section className={'car__article'}>
+            <section className={'note__article'}>
                 {fetchedData.map((item, index) => (
-                    <article key={item.id} className={`car__item`}>
+                    <article key={item.id} className={`note__item`}>
                         {editingIndex === index ? (
                             <div>
-                                <input
-                                    type="text"
-                                    value={editedItem.title}
-                                    onChange={(e) => setEditedItem({...editedItem, title: e.target.value})}
-                                />
-                                <input
-                                    type="text"
-                                    value={editedItem.content}
-                                    onChange={(e) => setEditedItem({...editedItem, content: e.target.value})}
-                                />
-                                <input
-                                    type="checkbox"
-                                    checked={editedItem.is_done}
-                                    onChange={(e) => setEditedItem({...editedItem, is_done: e.target.checked})}
-                                />
+                                <div className={'inputs'}>
+                                    <input
+                                        className={'edit__input'}
+                                        type="text"
+
+                                        value={editedItem.title}
+                                        onChange={(e) => setEditedItem({...editedItem, title: e.target.value})}
+                                    />
+                                    <input
+                                        className={'edit__input'}
+
+                                        type="text"
+                                        value={editedItem.content}
+                                        onChange={(e) => setEditedItem({...editedItem, content: e.target.value})}
+                                    />
+                                    <input
+                                        className={'edit__input'}
+
+                                        type="checkbox"
+                                        checked={editedItem.is_done}
+                                        onChange={(e) => setEditedItem({...editedItem, is_done: e.target.checked})}
+                                    />
+                                </div>
                                 <button className={'save__btn'} onClick={() => handleSaveClick(index)}>Save</button>
                                 <button className={'cancel__btn'} onClick={handleCancelClick}>Cancel</button>
                             </div>
+
                         ) : (
                             <div>
-                                <p>Id: {item.id}</p>
+                                {/*<p>Id: {item.id}</p>*/}
                                 <p>Title: {item.title}</p>
-                                <p>Text: {item.content}</p>
-                                <p>Done: {isDone(String(item.is_done))}</p>
+                                <p>Comment: {item.content}</p>
+                                <p>{isDone(String(item.is_done))}</p>
                                 <button className={'edit__btn'} onClick={() => handleEditClick(index)}>Edit</button>
                                 <button className={'delete__btn'} onClick={() => handleDeleteClick(index)}>Delete
                                 </button>
@@ -287,14 +299,11 @@ const LoggedInView = ({user}) => {
 
 
     return (
-        <div>
+        <div className={'logged__div'}>
             <h1>Welcome {user.username}</h1>
-            {/*<Link to="/private">*/}
-            {/*    <button>Private</button>*/}
-            {/*</Link>*/}
 
             <Link to="/logout">
-                <button>Logout</button>
+                <button className={'logout_btn'}>Logout</button>
             </Link>
         </div>
     );
@@ -302,14 +311,16 @@ const LoggedInView = ({user}) => {
 
 export const LoggedOutView = ({title = 'Home'}) => {
     return (
-        <div>
+        <div className={'logout__view'}>
             <h1>{title}</h1>
-            <Link to="/login">
-                <button>Login</button>
-            </Link>
-            <Link to="/register">
-                <button>Register</button>
-            </Link>
+            <div className={'logout__buttons'}>
+                <Link to="/login">
+                    <button className={'login__btn'}>Login</button>
+                </Link>
+                <Link to="/register">
+                    <button className={'register__btn'}>Register</button>
+                </Link>
+            </div>
         </div>
     );
 };

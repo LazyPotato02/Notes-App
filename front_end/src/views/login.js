@@ -31,7 +31,7 @@ const Login = () => {
         }
     };
     return (
-        <section>
+        <section className={'login__view'}>
             <h1>Login</h1>
             <form onSubmit={handleLogin}>
                 <div>

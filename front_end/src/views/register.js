@@ -34,7 +34,7 @@ function Register() {
     };
 
     return (
-        <section>
+        <section className={'register__view'}>
             <form onSubmit={handleSubmit}>
                 <h1>Register</h1>
                 <hr />
