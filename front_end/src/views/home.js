@@ -109,8 +109,9 @@ const Home = () => {
             'Authorization': `Bearer ${accessToken}`,
             'Content-Type': 'application/json',
         };
+         let i = index + 1
          try {
-            const response = await fetch(`${apiUrl}${fetchedData[index].creator_id}`, {
+            const response = await fetch(`${apiUrl}${i}`, {
                 method: 'DELETE',
                 headers: headers,
             });
@@ -125,7 +126,6 @@ const Home = () => {
         } catch (error) {
             console.error('Error updating content:', error);
         }
-
     }
 
     return (
